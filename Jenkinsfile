@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'bitnami/kubectl' }
+        docker { image 'bitnami/kubectl:latest' }
     }
     stages {
         stage('verison') {
