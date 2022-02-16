@@ -6,7 +6,7 @@ pipeline {
         stage('verison') {
             steps {
                 sh '''
-                   #!/bin/bash
+                   #!/bin/sh
                    whoami
                    '''
             }
