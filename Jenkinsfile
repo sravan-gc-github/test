@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh '''
                    #!/bin/sh
-                   whoami
+                   ansible --version
                    '''
             }
         }
