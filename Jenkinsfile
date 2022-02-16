@@ -1,13 +1,13 @@
 pipeline {
     agent {
-        docker { image 'sravangcpdocker/terraform:2' }
+        docker { image 'bitnami/kubectl' }
     }
     stages {
         stage('verison') {
             steps {
                 sh '''
                    #!/bin/bash
-                   terraform --version
+                   kubectl --version
                    '''
             }
         }
