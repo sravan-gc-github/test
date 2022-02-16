@@ -8,6 +8,7 @@ pipeline {
                 sh '''
                    #!/bin/sh
                    ping -c 5 192.168.1.4
+                   ansible --version
                    '''
             }
         }
