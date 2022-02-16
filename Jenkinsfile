@@ -1,12 +1,17 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { 
+               image 'sravangcpdocker/toolkit:11' 
+               args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
+           }
     }
     stages {
-        stage('Test') {
+        stage('verison') {
             steps {
-                sh 'node --version'
-                sh 'whoami'
+                sh '''
+                   #!/bin/bash
+                   whoami
+                   '''
             }
         }
     }
