@@ -1,13 +1,13 @@
 pipeline {
     agent {
-        docker { image 'rancher/kubectl:v1.23.3' }
+        docker { image 'sravangcpdocker/toolkit:11' }
     }
     stages {
         stage('verison') {
             steps {
                 sh '''
                    #!/bin/bash
-                   kubectl cluster-info
+                   whoami
                    '''
             }
         }
