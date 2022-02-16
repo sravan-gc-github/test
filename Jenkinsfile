@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh '''
                    #!/bin/bash
-                   kubectl --version
+                   kubectl version
                    '''
             }
         }
