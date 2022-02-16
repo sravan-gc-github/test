@@ -6,10 +6,8 @@ pipeline {
         stage('verison') {
             steps {
                 sh '''
-                   #!/bin/sh
-                   ping -c 5 192.168.1.4
-                   ansible --version
-                   cat /etc/ansible/ansible.cfg
+                   #!/bin/bash
+                   whoami
                    '''
             }
         }
